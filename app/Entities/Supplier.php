@@ -4,21 +4,11 @@
   use CodeIgniter\Entity\Entity;
 
   class Supplier extends Entity {
-    protected $idSupplier;
-    protected $namaSupplier;
-    protected $noHp;
-    protected $alamat;
-
-    public function __get($property) {
-      if (property_exists($this, $property)) {
-        return $this->$property;
-      }
-    }
-
-    public function __set($property, $value) {
-      if (property_exists($this, $property)) {
-        $this->$property = $value;
-      }
-    }
+    protected $attributes = [
+      'id_supplier' => null,
+      'nama_supplier' => null,
+      'no_hp' => null,
+      'alamat' => null
+    ];
   }
 ?>

@@ -4,22 +4,12 @@
   use CodeIgniter\Entity\Entity;
 
   class Pembelian extends Entity {
-    protected $idPembelian;
-    protected $idBarang;
-    protected $idSupplier;
-    protected $jumlahPembelian;
-    protected $hargaBeli;
-
-    public function __get($property) {
-      if (property_exists($this, $property)) {
-        return $this->$property;
-      }
-    }
-
-    public function __set($property, $value) {
-      if (property_exists($this, $property)) {
-        $this->$property = $value;
-      }
-    }
+    protected $attributes = [
+      'id_pembelian' => null,
+      'id_barang' => null,
+      'id_supplier' => null,
+      'jumlah_pembelian' => null,
+      'harga_beli' => null
+    ];
   }
 ?>
