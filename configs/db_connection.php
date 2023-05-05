@@ -21,9 +21,15 @@
     }
   }
 
-  // Example of usage: 
-  // $database = new Database();
-  // $db = $database->connect();
+  $database = new Database();
+  $db = $database->connect();
 
-  // $db->query("SET SESSION sql_mode = ''");
+  // Example of usage in view:
+  // <?php
+  //   require_once "../configs/db_connection.php";
+  //   require_once "../classes/Supplier.php";
+  //
+  //   $supplier = new Supplier($db);
+  //   $stmt = $supplier->readAll();
+  
 ?>
